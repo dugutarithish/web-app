@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "ap-south-2"
+}
 
 resource "aws_iam_role" "cluster" {
   name = "eks-cluster-example"
