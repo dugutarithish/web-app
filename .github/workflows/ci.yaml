@@ -93,6 +93,6 @@ jobs:
         run: |
           git config user.email "dugutarithishkumar@gmail.com"
           git config user.name "dugutarithish"
-          git add helm/go-web-chart/values.yaml
+          git add helm/go-web-app-chart/values.yaml
           git commit -m "Update tag in Helm chart [skip ci]" || exit 0
           git push
