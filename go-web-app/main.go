@@ -27,13 +27,21 @@ func contactPage(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	http.HandleFunc("/home", homePage)
-	http.HandleFunc("/courses", coursePage)
-	http.HandleFunc("/about", aboutPage)
-	http.HandleFunc("/contact", contactPage)
+        http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+                if r.URL.Path == "/" {
+                        homePage(w, r)
+                        return
+                }
+                http.NotFound(w, r)
+        })
 
-	err := http.ListenAndServe("0.0.0.0:8080", nil)
-	if err != nil {
-		log.Fatal(err)
-	}
+        http.HandleFunc("/home", homePage)
+        http.HandleFunc("/courses", coursePage)
+        http.HandleFunc("/about", aboutPage)
+        http.HandleFunc("/contact", contactPage)
+
+        err := http.ListenAndServe("0.0.0.0:8080", nil)
+        if err != nil {
+                log.Fatal(err)
+        }
 }
