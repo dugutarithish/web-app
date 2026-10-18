@@ -11,15 +11,12 @@ A simple Go web application that serves a multi-page DevOps learning website. Th
 
 The screenshots below are stored in `docs/images/` in this repository.
 
-| Website home page | 
-|---|---|
 | ![Go web app home page](<img width="1915" height="972" alt="home page" src="https://github.com/user-attachments/assets/ca48a117-881a-42d8-8ac3-009aa66f0d18" />
 ) 
 
-| About page |
-|---|---|
 | ![About page](<img width="1916" height="975" alt="about-page" src="https://github.com/user-attachments/assets/f76ede9c-88af-4270-8552-e496312b4bf2" />
-) | ![Contact page](<img width="1910" height="970" alt="Screenshot 2026-10-17 184652" src="https://github.com/user-attachments/assets/fb4bc52c-fd15-41c8-a240-ad9aab84170a" />
+
+ ![Contact page](<img width="1910" height="970" alt="Screenshot 2026-10-17 184652" src="https://github.com/user-attachments/assets/fb4bc52c-fd15-41c8-a240-ad9aab84170a" />
 ) 
 
 ### Argo CD deployment status
