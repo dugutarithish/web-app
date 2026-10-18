@@ -9,24 +9,19 @@ A simple Go web application that serves a multi-page DevOps learning website. Th
 
 ## Screenshots
 
-<table>
-  <tr>
-    <th>Website home page</th>
-    <th>Courses page</th>
-  </tr>
-  <tr>
-    <td><img src="docs/images/home-page.png" alt="Go web app home page" width="480"></td>
-    <td><img src="docs/images/courses-page.png" alt="DevOps courses page" width="480"></td>
-  </tr>
-  <tr>
-    <th>About page</th>
-    <th>Argo CD application status</th>
-  </tr>
-  <tr>
-    <td><img src="docs/images/about-page.png" alt="About page" width="480"></td>
-    <td><img src="docs/images/argocd-application.png" alt="Argo CD application showing Healthy and Synced" width="480"></td>
-  </tr>
-</table>
+The screenshots below are stored in `docs/images/` in this repository.
+
+| Website home page | Courses page |
+|---|---|
+| ![Go web app home page](docs/images/home-page.png) | ![DevOps courses page](docs/images/courses-page.png) |
+
+| About page | Contact page |
+|---|---|
+| ![About page](docs/images/about-page.png) | ![Contact page](docs/images/contact-page.png) |
+
+### Argo CD deployment status
+
+![Argo CD showing the application as Healthy and Synced](docs/images/argocd-application.png)
 
 ## Architecture
 
