@@ -173,6 +173,12 @@ Argo CD monitors the declared application source and reports synchronization and
 
 Argo CD installation notes are available in [`gitops/argocd/install.md`](gitops/argocd/install.md).
 
+## Troubleshooting and lessons learned
+
+I documented the deployment issues encountered during this project, including image-tag mismatches, stale Ingress resources, Argo CD OutOfSync states, Helm rendering checks, and deployment verification commands.
+
+See the [EKS troubleshooting guide](docs/troubleshooting.md) for symptoms, causes, fixes, commands, and lessons learned.
+
 ## What I practised
 
 - Building a small HTTP application in Go.
