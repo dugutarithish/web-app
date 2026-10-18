@@ -12,7 +12,6 @@ A simple Go web application that serves a multi-page DevOps learning website. Th
 The screenshots below are stored in `docs/images/` in this repository.
 
 | ![Go web app home page](<img width="1915" height="972" alt="home page" src="https://github.com/user-attachments/assets/ca48a117-881a-42d8-8ac3-009aa66f0d18" />
-) 
 
 | ![About page](<img width="1916" height="975" alt="about-page" src="https://github.com/user-attachments/assets/f76ede9c-88af-4270-8552-e496312b4bf2" />
 
