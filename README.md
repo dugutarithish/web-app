@@ -2,7 +2,7 @@
 
 A simple Go web application that serves a multi-page DevOps learning website. This repository packages the app with Docker, includes Kubernetes manifests and a Helm chart, and uses GitHub Actions for build, test, lint, and container-image publishing. Argo CD is used to track the Kubernetes application through GitOps.
 
-**Live website:** https://rithish.co.in  
+**Live website:** http://rithish.co.in  
 **Repository:** https://github.com/dugutarithish/web-app
 
 > The public website and cluster endpoints can change or be unavailable. The screenshots below document the state captured during deployment.
