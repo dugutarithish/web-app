@@ -5,7 +5,7 @@ metadata:
   labels:
     app: go-web-app
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: go-web-app
@@ -15,7 +15,8 @@ spec:
         app: go-web-app
     spec:
       containers:
-      - name: go-web-app
-        image: rithishkumar/go-web-app:{{ .Values.image.tag }}
-        ports:
-        - containerPort: 8080
+        - name: go-web-app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8080
