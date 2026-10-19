@@ -1,3 +1,4 @@
+```yaml
 name: CI/CD
 
 on:
@@ -80,19 +81,33 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout latest repository
         uses: actions/checkout@v4
         with:
+          ref: main
           token: ${{ secrets.TOKEN }}
+          fetch-depth: 0
 
       - name: Update tag in Helm chart
+        env:
+          IMAGE_TAG: ${{ github.run_id }}
         run: |
-          sed -i 's/tag: .*/tag: "38916173218"/' helm/go-web-app-chart/values.yaml
+          sed -i "s/tag: .*/tag: \"${IMAGE_TAG}\"/" helm/go-web-app-chart/values.yaml
 
       - name: Commit and push changes
         run: |
           git config user.email "dugutarithishkumar@gmail.com"
           git config user.name "dugutarithish"
+
           git add helm/go-web-app-chart/values.yaml
-          git commit -m "Update tag in Helm chart [skip ci]" || exit 0
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No Helm chart changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update tag in Helm chart [skip ci]"
+
+          git pull --rebase origin main
+          git push origin HEAD:main
+```
