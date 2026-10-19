@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: rithishkumar/go-web-app
   pullPolicy: IfNotPresent
-  tag: "root-fix"
+  tag: "39246996374"
 
 ingress:
   enabled: false
