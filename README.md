@@ -25,28 +25,12 @@ The screenshots below are stored in `docs/images/` in this repository.
 
 ## Architecture
 
-```text
-Source code (GitHub)
-        |
-        v
-GitHub Actions CI
-  |-- Build Go application
-  |-- Run Go tests
-  |-- Run golangci-lint
-  `-- Build and push Docker image to Docker Hub
-        |
-        v
-Helm chart / Kubernetes manifests in Git
-        |
-        v
-Argo CD watches Git and synchronizes the application
-        |
-        v
-Kubernetes Deployment -> Pods -> Service -> Ingress
-        |
-        v
-https://rithish.co.in
-```
+The diagram below shows the request path through Route 53, the load balancer and NGINX Ingress, into the Kubernetes Service and Go application pods. The lower pipeline shows CI/CD and GitOps delivery. Moving dots represent traffic and deployment flow.
+
+<p align="center">
+  <img src="docs/architecture.svg" alt="Animated AWS EKS architecture with moving traffic arrows and CI/CD pipeline" width="100%">
+</p>
+
 
 ## Technology stack
 
